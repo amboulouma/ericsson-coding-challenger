@@ -44,3 +44,41 @@ r = list(s)
 for i in range(len(s)):
     print("".join(r))
     r[i] = " "
+
+# Exercise 7
+
+n = int(input())
+
+for i in range(1, n+1):
+    print("/", end="")
+    if i%3 == 0:
+        print("", end=" ")
+ 
+# Exercise 8
+
+n = sorted(list(map(int, input().split())))
+print(n)
+if len(n)%2 == 0:
+    print((n[len(n)//2 - 1] + n[len(n)//2])/2)
+else:
+    print(n[len(n)//2])
+
+# Exercise 9
+
+from collections import Counter
+data = ""
+while True:
+    s = input()
+    if not s: break
+    data += s + " "
+
+user_input = data.split()
+c = Counter(user_input)
+
+print(c.most_common()[0][0])
+
+# Exercise 10
+
+n = list(map(int, input().split()))
+print(n[len(n)//2])
+
